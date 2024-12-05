@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>wlocome to contact page</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="name">name</label>
+        <input type="text" name="name"> <br><br>
+        <label for="address">address</label>
+        <input type="text" name="address">
+        <br><br>
+        <label for="phone_number">phone_number</label>
+        <input type="number" name="phone_number">
+        <br><br>
+        <label for="location">location</label>
+        <input type="text" name="location" >
+        <br><br>
+        <button type="submit">submit</button>
+    </form>
+
+</body>
+</html>

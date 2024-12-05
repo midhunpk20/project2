@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welocome to home page</h1><br>
+    <a href="{% url 'contact_link' %}">go to contact page</a>
+    <table style="border: solid 1px;">
+        <tr style="border: solid 1px;">
+            <th style="border: solid 1px;">name</th>
+            <th style="border: solid 1px;">address</th>
+            <th style="border: solid 1px;">phone_number</th>
+            <th style="border: solid 1px;">location</th>
+        </tr>
+
+        {% for i in user %}
+        <tr style="border: solid 1px;">
+            <td style="border: solid 1px;">{{i.name}}</td>
+            <td style="border: solid 1px;">{{i.address}}</td>
+            <td style="border: solid 1px;">{{i.phone_number}}</td>
+            <td style="border: solid 1px;">{{i.location}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+
+    <br><br>
+    <a href="{% url 'login_link'%}">go to login page</a>
+    <br><br>
+    <a href="{%url 'register_link'%}">go to register page</a>
+    <br><br>
+    <a href="{%url 'logout_link'%}">Logout</a>
+</body>
+</html>
